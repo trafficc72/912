@@ -24,7 +24,7 @@ class Entr < Formula
   def install
     ENV["PREFIX"] = prefix
     ENV["MANPREFIX"] = man
-    system "./configure"
+    system "./configure", *std_configure_args
     system "make"
     system "make", "install"
   end
@@ -35,6 +35,7 @@ class Entr < Formula
       sleep 0.5
       touch testpath/"test.2"
     end
-    assert_equal "New File", pipe_output("#{bin}/entr -n -p -d echo 'New File'", testpath).strip
+
+    assert_equal "New File", pipe_output("#{bin}/entr -n -p -d echo 'New File'", testpath.to_s).strip
   end
 end
