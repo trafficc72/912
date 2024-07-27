@@ -21,7 +21,8 @@ class Ethereum < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "35c56528c579bd6666a0817a5aa3ac964e44b5dde38a1aa9153507efbf15f604"
   end
 
-  depends_on "go" => :build
+  # use "go" again when https://github.com/ethereum/go-ethereum/issues/30100 is resolved and released
+  depends_on "go@1.22" => :build
 
   conflicts_with "erigon", because: "both install `evm` binaries"
 
