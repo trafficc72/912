@@ -20,7 +20,8 @@ class Bettercap < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "4eee88cd3e242be845ff45289d6d350a5bbbe9bac3801c2a17665c770ba24492"
   end
 
-  depends_on "go" => :build
+  # use "go" again when https://github.com/bettercap/bettercap/issues/1106 is resolved and released
+  depends_on "go@1.22" => :build
   depends_on "pkg-config" => :build
   depends_on "libusb"
 
