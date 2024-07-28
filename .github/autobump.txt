@@ -2195,6 +2195,7 @@ rosa-cli
 rospo
 rover
 rpcgen
+rpds-py
 rpg-cli
 rpki-client
 rpl

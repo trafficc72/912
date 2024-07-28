@@ -688,6 +688,9 @@
   "ruff-lsp": {
     "exclude_packages": ["ruff"]
   },
+  "rpds-py": {
+    "extra_packages": ["maturin", "setuptools-rust"]
+  },
   "sail": {
     "exclude_packages": ["certifi", "cryptography"]
   },
