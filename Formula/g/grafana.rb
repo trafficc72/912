@@ -21,7 +21,8 @@ class Grafana < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "f3b169d5a56a49dfd7089ba0f369a256ad72ab5014b3355b73f031d62a2db514"
   end
 
-  depends_on "go" => :build
+  # use "go" again when https://github.com/grafana/grafana/issues/89796 is resolved and released
+  depends_on "go@1.22" => :build
   depends_on "node" => :build
   depends_on "yarn" => :build
 
